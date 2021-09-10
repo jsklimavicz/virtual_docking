@@ -1,0 +1,12 @@
+receptor = DmelTyrR2_rigid.pdbqt
+flex = DmelTyrR2_flex.pdbqt
+
+size_x = 20.8
+size_y = 24.2
+size_z = 30.8
+
+center_x = 50.7
+center_y = 36.4
+center_z = 73.7
+
+exhaustiveness = 8
