@@ -13,9 +13,26 @@ import time
 
 
 
-class LatexWriter:
-	gridx = 2
-	gridy = 3
+parser = argparse.ArgumentParser(description="""Produces pdf file for virtual screening results""")
+parser.add_argument("grouped_data", 
+	help="Clustered data file from ""bayesMM.py"", in .csv format")
+parser.add_argument("-o", metavar="output_filename", dest = "output",
+	help="Name (with extension) of the output pdf file without extension. Default is compound_structures.",
+	default = "compound_structures")
+parser.add_argument("-p", metavar="pages", dest = "p", type = int,
+	help="Number of lines to include in the output file. Default is to print all.",
+	default = 5)
+parser.add_argument("-i", metavar="imagepath", dest = "imagepath",
+	help="Directory of where .png images are/should be stored. Default is ""./images"" ",
+	default = "./images")
+parser.add_argument("-v", "--verbose", 
+	help="Prints out log info to stdout.",
+	default=False, action="store_true")
+
+
+class Latex_Writer:
+	gridx = 4
+	gridy = 6
 	bs = '\\'
 
 	def __init__(self, img_folder, title = "Merlin Bioassay Results"):
