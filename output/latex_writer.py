@@ -13,8 +13,7 @@ import pandas as pd
 import time
 
 
-
-parser = argparse.ArgumentParser(description="""Produces adequate parameters for PCA analysis""")
+parser = argparse.ArgumentParser(description="""Produces pdf file for virtual screening results""")
 parser.add_argument("grouped_data", 
 	help="Clustered data file from ""bayesMM.py"", in .csv format")
 parser.add_argument("-o", metavar="output_filename", dest = "output",
